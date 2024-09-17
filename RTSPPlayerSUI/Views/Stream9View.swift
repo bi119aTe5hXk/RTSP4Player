@@ -48,7 +48,9 @@ struct Stream9View: View {
             }
         }.padding(0)
             .edgesIgnoringSafeArea(.all)
-        
+			.onAppear { UIApplication.shared.isIdleTimerDisabled = true }
+			.onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
+
     }
 }
 

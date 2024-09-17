@@ -19,8 +19,4 @@ class UD {
         keyStore.set(arr, forKey: kURLArr)
         keyStore.synchronize()
     }
-    
-    init() {
-        UserDefaults.standard.register(defaults: [kURLArr:[""]])
-    }
 }

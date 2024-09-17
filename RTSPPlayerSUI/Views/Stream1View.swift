@@ -16,6 +16,8 @@ struct Stream1View: View {
         VLCPlayerView(mediaUrl: $urlArr[0])
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)
+			.onAppear { UIApplication.shared.isIdleTimerDisabled = true }
+			.onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
     }
 }
 

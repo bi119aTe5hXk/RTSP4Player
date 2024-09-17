@@ -30,7 +30,9 @@ struct Stream4View: View {
             }
         }.padding(0)
             .edgesIgnoringSafeArea(.all)
-        
+			.onAppear { UIApplication.shared.isIdleTimerDisabled = true }
+			.onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
+
         
     }
 }
